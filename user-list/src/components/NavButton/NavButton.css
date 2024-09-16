@@ -1,0 +1,11 @@
+.menu-item {
+    display: inline-flex;
+    height: 100%;
+    padding: 0 22px;
+    border-radius: 10px;
+}
+
+.active {
+    color: whitesmoke;
+    background-color: #829fff;
+}

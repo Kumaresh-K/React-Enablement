@@ -1,0 +1,24 @@
+.user-card {
+    justify-content: space-between;
+    background-color: #fbfcff;
+    height: 16rem;
+    width: 32%;
+    margin: 5px;
+}
+.user-card:hover {
+    border: 1px solid blue;
+}
+.user-image {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.user-details {
+    width: 50%;
+}
+.user-tags {
+    flex-wrap: wrap;
+}
