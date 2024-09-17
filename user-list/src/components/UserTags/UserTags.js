@@ -1,5 +1,14 @@
 import './UserTags.css';
 
+/**
+ * Represents tags in user tile component.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.tag - The tags of the user.
+ * @returns {React.ReactElement} A tag element.
+ */
+
 const UserTags = ({tags}) => {
     const userTags = tags.map(tag => {
         return <span className='tag'>{tag}</span>

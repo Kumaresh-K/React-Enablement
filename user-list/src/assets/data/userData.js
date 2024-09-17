@@ -40,7 +40,7 @@ const UserDetails = [
         location : 'Lyndhurst, NJ',
         tags : ['vintage', 'electric'],
         userPic : '100106.jpg'        
-    },
+    }   
 ]  
 
 export default UserDetails;

@@ -1,10 +1,13 @@
+/* NavButton component */
 .menu-item {
     display: inline-flex;
-    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5c6170;
     padding: 0 22px;
     border-radius: 10px;
+    cursor: pointer;
 }
-
 .active {
     color: whitesmoke;
     background-color: #829fff;

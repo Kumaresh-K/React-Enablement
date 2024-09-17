@@ -1,8 +1,8 @@
 .tag {
-    padding: 5px;
-    margin: 2px;
-    border: 1px solid blue;
-    border-radius: 5px;
+    padding: 3px 10px 7px;
+    margin: 2px 5px 4px 0;
+    border: 1px solid #7a90de;
+    border-radius: 1em;
     background-color: white;
-    color: blue;
+    color: #7a90de;
 }

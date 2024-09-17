@@ -1,18 +1,43 @@
 import './NavBar.css';
-import NavButton from "../NavButton/NavButton";
+import NewUsers from '../../pages/NewUsers/NewUsers';
+import OtherPage from '../../pages/OtherPage/OtherPage';
+import NavButton from '../NavButton/NavButton';
+import { useState } from 'react';
 
+//Navigation menu with the respective menu content
 const navigationMenu = [
-    {id:1, menu:'Reputation'},
-    {id:2, menu:'New users'},
-    {id:3, menu:'Voters'},
-    {id:4, menu:'Editors'},
-    {id:5, menu:'Moderators'},
+    {id:1, menu:'Reputation', content:<OtherPage></OtherPage>},
+    {id:2, menu:'New users', content:<NewUsers></NewUsers>},
+    {id:3, menu:'Voters', content:<OtherPage></OtherPage>},
+    {id:4, menu:'Editors', content:<OtherPage></OtherPage>},
+    {id:5, menu:'Moderators', content:<OtherPage></OtherPage>},
 ];
 
-const NavBar = () => {
-    let navItems = navigationMenu.map((menuItem)=>{
-       return <NavButton {...menuItem}></NavButton>
+/**
+ * Represents a navigation menu component.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {React.FunctionComponent} props.reqContent - The function that requires the content based on the navgation menu.
+ * @returns {React.ReactElement} A navigation bar element.
+ */
+
+const NavBar = ({reqContent}) => {
+    const [activeComponent, setActiveComponent] = useState('New users');
+    
+    function handleClick(selectedMenu) {
+        setActiveComponent(selectedMenu.menu);
+        reqContent(selectedMenu.content);
+    }
+
+    const navItems = navigationMenu.map((menuItem)=>{
+       return <NavButton 
+        {...menuItem} 
+        isActive={menuItem.menu===activeComponent} 
+        handleClick={()=>handleClick(menuItem)}>     
+        </NavButton>
     })
+
     return (
         <ul className='nav-bar'>
             {navItems}

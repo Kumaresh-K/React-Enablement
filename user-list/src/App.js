@@ -1,26 +1,28 @@
+import { useState } from 'react';
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import SearchIcon from './assets/icon/search.png';
-import UserDetails from './assets/data/userData';
-import UserList from './components/UserList/UserList';
+import Header from './components/Header/Header';
+import NewUsers from './pages/NewUsers/NewUsers';
+import ContentContainer from './components/ContentContainer/ContentContainer';
+
+/**
+ * Represents a main component that contains the app.
+ *
+ * @component
+ * @returns {React.ReactElement} the whole application element.
+ */
 
 function App() {
+  const [content, setContent] = useState(<NewUsers></NewUsers>);
+
+  const changeContent = (content) => {
+    setContent(content);
+  };
+
     return (
-    <header>
-      <p id='app-name'>Users</p>
-      <div className='container flex center'>
-        <form>
-          <button type='submit' className='submit-button'>
-            <img src={SearchIcon} alt='search icon'></img>
-          </button>
-          <input type='text' id='search-bar' placeholder='Search users' />
-        </form>
-        <NavBar></NavBar>
-      </div>
-      <div className='user-container flex'>
-        <UserList users={UserDetails}></UserList>
-      </div>
-    </header>
+    <>
+    <Header reqContent={changeContent}></Header>
+    <ContentContainer content={content}></ContentContainer>
+    </>
   );
 }
 
