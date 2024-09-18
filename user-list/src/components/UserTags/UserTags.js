@@ -10,8 +10,8 @@ import './UserTags.css';
  */
 
 const UserTags = ({tags}) => {
-    const userTags = tags.map(tag => {
-        return <span className='tag'>{tag}</span>
+    const userTags = tags.map((tag, i) => {
+        return <span key={i} className='tag'>{tag}</span>
     });
     return(
         userTags

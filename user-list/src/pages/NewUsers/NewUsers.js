@@ -12,8 +12,8 @@ import UserCard from '../../components/UserCard/UserCard';
 
 const NewUsers = () => {
 
-    const userList = UserDetails.map(user => {
-        return <UserCard user={user}></UserCard>;
+    const userList = UserDetails.map((user, i) => {
+        return <UserCard key={i} user={user}></UserCard>;
     });
 
    return (   

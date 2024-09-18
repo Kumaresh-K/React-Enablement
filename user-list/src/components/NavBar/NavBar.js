@@ -6,11 +6,11 @@ import { useState } from 'react';
 
 //Navigation menu with the respective menu content
 const navigationMenu = [
-    {id:1, menu:'Reputation', content:<OtherPage></OtherPage>},
-    {id:2, menu:'New users', content:<NewUsers></NewUsers>},
-    {id:3, menu:'Voters', content:<OtherPage></OtherPage>},
-    {id:4, menu:'Editors', content:<OtherPage></OtherPage>},
-    {id:5, menu:'Moderators', content:<OtherPage></OtherPage>},
+    {menu:'Reputation', content:<OtherPage></OtherPage>},
+    {menu:'New users', content:<NewUsers></NewUsers>},
+    {menu:'Voters', content:<OtherPage></OtherPage>},
+    {menu:'Editors', content:<OtherPage></OtherPage>},
+    {menu:'Moderators', content:<OtherPage></OtherPage>},
 ];
 
 /**
@@ -32,9 +32,10 @@ const NavBar = ({reqContent}) => {
 
     const navItems = navigationMenu.map((menuItem)=>{
        return <NavButton 
+        key={menuItem.menu}
         {...menuItem} 
         isActive={menuItem.menu===activeComponent} 
-        handleClick={()=>handleClick(menuItem)}>     
+        handleClick={()=>handleClick(menuItem)}>    
         </NavButton>
     })
 

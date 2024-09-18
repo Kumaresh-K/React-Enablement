@@ -12,9 +12,9 @@ import './NavButton.css';
  * @returns {React.ReactElement} A menu element.
  */
 
-const NavButton = ({id, menu, isActive, handleClick}) => {
+const NavButton = ({menu, isActive, handleClick}) => {
     return (
-        <li className={'menu-item center ' + (isActive?'active':'')} key={id} onClick={handleClick}>{menu}</li>
+        <li className={'menu-item center ' + (isActive?'active':'')} onClick={handleClick}>{menu}</li>
     );
 }
 
