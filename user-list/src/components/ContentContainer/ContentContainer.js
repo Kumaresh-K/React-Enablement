@@ -1,4 +1,4 @@
-import './ContentContainer.css';
+import styles from './ContentContainer.module.css';
 
 /**
  * Represents a content container component.
@@ -11,7 +11,7 @@ import './ContentContainer.css';
 
 const ContentContainer = (props) => {
     return (
-        <div className='content-container'>
+        <div className={styles.container}>
             {props.content}
         </div>
     );

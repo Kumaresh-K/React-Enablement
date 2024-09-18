@@ -1,9 +1,8 @@
-import './NavBar.css';
+import styles from './NavBar.module.css';
 import NewUsers from '../../pages/NewUsers/NewUsers';
 import OtherPage from '../../pages/OtherPage/OtherPage';
 import NavButton from '../NavButton/NavButton';
 import { useState } from 'react';
-
 //Navigation menu with the respective menu content
 const navigationMenu = [
     {menu:'Reputation', content:<OtherPage></OtherPage>},
@@ -40,7 +39,7 @@ const NavBar = ({reqContent}) => {
     })
 
     return (
-        <ul className='nav-bar'>
+        <ul className={styles.navBar}>
             {navItems}
         </ul>
     );

@@ -1,4 +1,4 @@
-import './UserCard.css';
+import styles from './UserCard.module.css';
 import UserTags from '../UserTags/UserTags';
 
 /**
@@ -14,17 +14,21 @@ const UserCard = ({user}) => {
     const userImgUrl = "url('"+require('../../assets/images/'+user.userPic)+"')";
 
     return (
-        <div className='user-card flex'>
-            <div className ='user-image-container'>
-            <div className='user-image'style={{ 
+        <div className={styles.card}>
+            <div className={styles.container}>
+            <div className={styles.image} style={{ 
                 backgroundImage: userImgUrl
                 }}>
             </div>
             </div>
-            <div className='user-details'>
-                <span className='user-name'>{user.firstName +' '+ user.lastName}</span>
-                <div className='user-location'>{user.location}</div>
-                <div className='user-tags flex'>
+            <div className={styles.details}>
+                <span className={styles.name}>
+                    {user.firstName +' '+ user.lastName}
+                </span>
+                <div className={styles.location}>
+                    {user.location}
+                </div>
+                <div className={styles.tags}>
                     <UserTags tags={user.tags}></UserTags>
                 </div>
             </div>

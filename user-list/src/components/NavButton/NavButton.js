@@ -1,4 +1,4 @@
-import './NavButton.css';
+import styles from './NavButton.module.css';
 
 /**
  * Represents a particular menu in navgation bar component.
@@ -14,7 +14,7 @@ import './NavButton.css';
 
 const NavButton = ({menu, isActive, handleClick}) => {
     return (
-        <li className={'menu-item center ' + (isActive?'active':'')} onClick={handleClick}>{menu}</li>
+        <li className={isActive?`${styles.menuItem} ${styles.active}`:styles.menuItem} onClick={handleClick}>{menu}</li>
     );
 }
 

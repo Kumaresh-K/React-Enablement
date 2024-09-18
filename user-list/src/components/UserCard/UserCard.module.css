@@ -1,18 +1,19 @@
 /* UserCard component */
-.user-card {
+.card {
+    display: flex;
     min-height: 18.6rem;
     width: 29.1rem;
     background-color: #fbfcff;
     border-radius: 20px;
 }
-.user-card:hover {
+.card:hover {
     border: 1px solid #6c86dba6;
     box-shadow: 0px 5px 10px 0px #0000001a;
 }
-.user-image-container {
+.container {
     width: 39%;
 }
-.user-image {
+.image {
     margin: 33px 30px;
     height: 140px;
     width: 140px;
@@ -21,25 +22,29 @@
     background-repeat: no-repeat;
     border-radius: 50%;
 }
-.user-details {
+.details {
     padding: 62px 10px 10px;
     width: 61%;
 }
-.user-name {
-    display: inline-block;
-    margin-bottom: 8px;
+.name {
     font-family: "Merriweather", serif;
+    display: inline-block;
+    margin-bottom: 7px;
     font-size: 26px;
     font-weight: 800;
 }
-.user-location {
+.location {
     font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
-.user-tags {
+.tags {
+    height: 125px;
+    display: flex;
     flex-wrap: wrap;
-    padding: 10px 0;
+    align-content: flex-start;
+    padding: 10px 2px;
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 500;
+    overflow-y: scroll;
 }

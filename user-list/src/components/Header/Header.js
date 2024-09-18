@@ -1,4 +1,4 @@
-import './Header.css';
+import styles from './Header.module.css';
 import NavBar from '../NavBar/NavBar';
 import SearchIcon from '../../assets/icon/search.png';
 
@@ -14,13 +14,13 @@ import SearchIcon from '../../assets/icon/search.png';
 const Header = ({reqContent}) => {
     return (
         <header>
-            <p id='app-name'>Users</p>
-            <div className='container flex center'>
+            <p id={styles.appName}>Users</p>
+            <div className={styles.container}>
                 <form>
-                <button type='submit' className='submit-button'>
+                <button type='submit' className={styles.button}>
                     <img src={SearchIcon} alt='search icon'></img>
                 </button>
-                <input type='text' id='search-bar' placeholder='Search users' />
+                <input type='text' id={styles.searchBar} placeholder='Search users' />
                 </form>
                 <NavBar reqContent={reqContent}></NavBar>
             </div>

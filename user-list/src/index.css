@@ -4,10 +4,10 @@
   padding: 0;
   max-width: 100%;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 body {
-  margin: 8.4% 8.25%;
+  margin: 8.4% 8.24%;
   color: black;
 }
 

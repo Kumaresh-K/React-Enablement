@@ -1,4 +1,4 @@
-import './NewUsers.css';
+import styles from './NewUsers.module.css';
 import UserDetails from '../../assets/data/userData';
 import UserCard from '../../components/UserCard/UserCard';
 
@@ -17,7 +17,7 @@ const NewUsers = () => {
     });
 
    return (   
-        <div className='user-container'>
+        <div className={styles.container}>
             {userList}
         </div>
    ); 

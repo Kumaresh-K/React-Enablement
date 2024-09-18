@@ -1,5 +1,3 @@
-import './OtherPage.css';
-
 /**
  * Represents other page component that represent the unavailable pages.
  *

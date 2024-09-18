@@ -1,12 +1,16 @@
 /* NavButton component */
-.menu-item {
+.menuItem {
     display: inline-flex;
-    font-size: 24px;
-    font-weight: bold;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 500;
     color: #5c6170;
     padding: 0 22px;
     border-radius: 10px;
     cursor: pointer;
+}
+.menuItem:hover {
+    background-color: #829fff;
 }
 .active {
     color: whitesmoke;

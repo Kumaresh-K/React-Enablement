@@ -1,4 +1,4 @@
-import './UserTags.css';
+import styles from './UserTags.module.css';
 
 /**
  * Represents tags in user tile component.
@@ -11,11 +11,9 @@ import './UserTags.css';
 
 const UserTags = ({tags}) => {
     const userTags = tags.map((tag, i) => {
-        return <span key={i} className='tag'>{tag}</span>
+        return <span key={i} className={styles.tag}>{tag}</span>
     });
-    return(
-        userTags
-    );
+    return userTags;
 };
 
 export default UserTags;

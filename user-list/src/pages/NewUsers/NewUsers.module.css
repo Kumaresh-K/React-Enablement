@@ -1,6 +1,7 @@
 /* NewUser component */
-.user-container {
+.container {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 22px 22px;
+  letter-spacing: -0.5px;
 }

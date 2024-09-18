@@ -1,34 +1,42 @@
 /* Header component */
-#app-name{
+#appName{
     font-family: "Merriweather", serif;
     font-size: 45px;
     font-weight:900;
     padding-bottom: 34px;
   }
 .container {
-    height: 92px;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    height: 92px;
   }
 form {
     display: inline-flex;
     align-items: center;
-    padding: 5px 27px;
-    border : 1px solid #c5cce6;
-    border-radius: 10px;
+    padding: 6px 25px;
+    border : 2px solid #c5cce6;
+    border-radius: 5px;
     height: 100%;
     width: 32.5%;
   }
-.submit-button {
-    width: 40px;
+.button {
+    margin-top: 2px;
+    width: 42px;
     border: none;
     background-color: transparent;
   }
-#search-bar {
+#searchBar {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
     display: inline;
     height: 4rem;
     width: 100%;
-    margin-left: 18px;
+    padding-top: 2px;
+    margin-left: 16px;
+    letter-spacing: -0.5px;
     border: none;
+  }
+#search-bar:focus { 
+    outline: none; 
   }
