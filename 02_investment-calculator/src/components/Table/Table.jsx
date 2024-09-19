@@ -1,15 +1,9 @@
 import styles from './Table.module.css';
 import {calculateInvestmentResults, formatter} from '../../util/investment';
 
-const Table = () => {
+const Table = ({investment}) => {
     let previousInterest = 0;
-    const investment = {
-        initialInvestment : 15000,
-        annualInvestment : 1200,
-        expectedReturn : 6,
-        duration : 10,
-    };
-
+    
     const calculations = calculateInvestmentResults(investment);
 
     const tableContent = calculations.map((obj, i)=>{
