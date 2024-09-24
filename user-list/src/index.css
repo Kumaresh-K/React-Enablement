@@ -1,0 +1,21 @@
+/* Universal style */
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 8.4% 8.24%;
+  color: black;
+}
+
+/* Static definitions */
+.flex {
+  display: flex;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}

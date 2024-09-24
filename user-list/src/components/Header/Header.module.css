@@ -1,0 +1,13 @@
+/* Header component */
+.appName{
+    font-family: "Merriweather", serif;
+    font-size: 45px;
+    font-weight:900;
+    padding-bottom: 34px;
+  }
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 92px;
+  }

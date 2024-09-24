@@ -1,0 +1,11 @@
+/* NavBar component */
+.navBar{
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 2px;
+    list-style-type: none;
+    font-size: 23.8px;
+    font-weight: 500;
+    height: 86%;
+    width: 52.88%;
+}
