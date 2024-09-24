@@ -1,7 +1,6 @@
 import styles from './Header.module.css';
+import SearchBar from '../SearchBar/SearchBar';
 import NavBar from '../NavBar/NavBar';
-import SearchIcon from '../../assets/icon/search.png';
-
 /**
  * Represents a header component.
  *
@@ -14,14 +13,9 @@ import SearchIcon from '../../assets/icon/search.png';
 const Header = ({reqContent}) => {
     return (
         <header>
-            <p id={styles.appName}>Users</p>
+            <p className={styles.appName}>Users</p>
             <div className={styles.container}>
-                <form>
-                <button type='submit' className={styles.button}>
-                    <img src={SearchIcon} alt='search icon'></img>
-                </button>
-                <input type='text' id={styles.searchBar} placeholder='Search users' />
-                </form>
+                <SearchBar />
                 <NavBar reqContent={reqContent}></NavBar>
             </div>
         </header>

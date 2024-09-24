@@ -1,16 +1,7 @@
 import styles from './NavBar.module.css';
-import NewUsers from '../../pages/NewUsers/NewUsers';
-import OtherPage from '../../pages/OtherPage/OtherPage';
+import { navigationMenu } from '../../constants/index';
 import NavButton from '../NavButton/NavButton';
 import { useState } from 'react';
-//Navigation menu with the respective menu content
-const navigationMenu = [
-    {menu:'Reputation', content:<OtherPage></OtherPage>},
-    {menu:'New users', content:<NewUsers></NewUsers>},
-    {menu:'Voters', content:<OtherPage></OtherPage>},
-    {menu:'Editors', content:<OtherPage></OtherPage>},
-    {menu:'Moderators', content:<OtherPage></OtherPage>},
-];
 
 /**
  * Represents a navigation menu component.

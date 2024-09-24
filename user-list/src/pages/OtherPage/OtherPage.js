@@ -1,3 +1,5 @@
+import './OtherPage.module.css';
+
 /**
  * Represents other page component that represent the unavailable pages.
  *
@@ -8,7 +10,7 @@
 
 const OtherPage = () => {
     return (
-        <h2>Contents will be available soon...</h2>
+        <h3>Contents will be available soon...</h3>
     );
 };
 

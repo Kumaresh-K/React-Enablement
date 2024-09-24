@@ -9,11 +9,13 @@ import styles from './UserTags.module.css';
  * @returns {React.ReactElement} A tag element.
  */
 
-const UserTags = ({tags}) => {
-    const userTags = tags.map((tag, i) => {
-        return <span key={i} className={styles.tag}>{tag}</span>
-    });
-    return userTags;
+const UserTags = ({labels}) => {
+    return <>
+        {labels.map((label, key) => (
+            <span key={key} className={styles.tag}>{label}</span>
+        ))}
+    </>
+
 };
 
 export default UserTags;

@@ -11,15 +11,10 @@ import UserTags from '../UserTags/UserTags';
  */
 
 const UserCard = ({user}) => {
-    const userImgUrl = "url('"+require('../../assets/images/'+user.userPic)+"')";
-
     return (
         <div className={styles.card}>
             <div className={styles.container}>
-            <div className={styles.image} style={{ 
-                backgroundImage: userImgUrl
-                }}>
-            </div>
+                <img className={styles.image} src={require('../../assets/images/'+user.userPic)}></img>
             </div>
             <div className={styles.details}>
                 <span className={styles.name}>
@@ -29,7 +24,7 @@ const UserCard = ({user}) => {
                     {user.location}
                 </div>
                 <div className={styles.tags}>
-                    <UserTags tags={user.tags}></UserTags>
+                    <UserTags labels={user.tags}></UserTags>
                 </div>
             </div>
         </div>
