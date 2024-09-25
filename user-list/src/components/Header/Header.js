@@ -13,8 +13,8 @@ import NavBar from '../NavBar/NavBar';
 const Header = ({reqContent}) => {
     return (
         <header>
-            <p className={styles.appName}>Users</p>
-            <div className={styles.container}>
+            <p className={styles.headerText}>Users</p>
+            <div className={styles.topBar}>
                 <SearchBar />
                 <NavBar reqContent={reqContent}></NavBar>
             </div>

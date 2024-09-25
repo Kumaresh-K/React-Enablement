@@ -15,13 +15,12 @@ import styles from './NavButton.module.css';
 const NavButton = ({menu, isActive, handleClick}) => {
     return (
         <li className={styles.menuItem}>
-            <a
-             href='#'
+            <button
              onClick={handleClick}
              className={isActive ? styles.active : ''}
              >
                 {menu}
-            </a>
+            </button>
         </li>
     );
 }
