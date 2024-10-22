@@ -1,0 +1,15 @@
+// NavBar Component
+.menu {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 22.2rem;
+    .menuItem {
+        list-style-type: none;
+        a {
+            text-decoration: none;
+            color: #7a1655;
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+}

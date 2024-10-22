@@ -1,0 +1,30 @@
+//DestinationCard Component
+.destinationCard {
+    display: inline-flex;
+    flex-direction: column;
+    width: 480px;
+    img {
+        margin-bottom: 20px;
+    }
+    .catchPhrase{
+        font-size: 37px;
+        font-weight: 300;
+        padding-bottom: 9px;
+        opacity: 0.8;
+    }
+    .city {
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 28px;
+    }
+    .shortDescription {
+        height: 191px;
+        width: 95%;
+        font-size: 19px;
+        color: #272727da;
+        font-weight: 400;
+        line-height: 24px;
+        overflow-y: scroll;
+        margin-bottom: 18px;
+    }
+}

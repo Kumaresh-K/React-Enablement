@@ -1,0 +1,10 @@
+//Header Component
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 39px 65px 32px;
+  img {
+    width: 140px;
+  }
+}

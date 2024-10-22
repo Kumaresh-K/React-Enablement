@@ -1,0 +1,11 @@
+//DestinationList Component
+.destinations{
+    padding: 0px 6.55%;
+    margin-bottom: 80px;
+    .destinationCardsContainer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 87px 30px;
+    }
+
+}

@@ -1,0 +1,55 @@
+//PlaceFocusPromo element
+.placeBanner {
+  display: flex;
+  color: #7a1655;
+  margin-top: 5px;
+
+  .placeContent {
+    position: relative;
+    z-index: 1;
+    padding: 13.2% 0% 0% 6.5%;
+    width: 41.5%;
+    .placeName {
+      font-size: 80px;
+      letter-spacing: 1px;
+      padding-bottom: 20px;
+    }
+    .catchPhrase {
+      background-color: #7a1655;
+      color: #ffffff;
+      font-size: 60px;
+      font-weight: 500;
+      padding: 66px 74px 39px;
+      margin-bottom: 33px;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      line-height: 100px;
+      width: 65.8rem;
+    }
+    .temperature {
+      color: black;
+      font-weight: 400;
+      font-size: 60px;
+      .weight {
+        font-weight: 100;
+        padding-bottom: 4px;
+      }
+    }
+  }
+  .placeCoverImage {
+    img {
+      width: 100%;
+    }
+    width: 58.5%;
+  }
+}
+.description {
+  margin: 107px 0;
+  padding: 0 6.5%;
+  word-spacing: 10px;
+  line-height: 47px;
+  text-align: justify;
+  font-size: 35px;
+  font-weight: 400;
+  opacity: 0.8;
+}
