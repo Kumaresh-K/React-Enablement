@@ -1,6 +1,6 @@
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import styles from "./DestinationNavigator.module.scss";
-import useNavigationService from "../../services/NavigationService.tsx";
+import useNavigationService from "../../services/NavigationService";
 import destinationChoices from "../../assets/data/placeDetails.json";
 import { useRef } from "react";
 

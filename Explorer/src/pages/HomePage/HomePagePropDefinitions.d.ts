@@ -2,7 +2,7 @@ import exp from "constants";
 import { CSSProperties } from "react";
 
 export type primaryButtonProp = {
-  buttonContent: String;
+  buttonContent: string;
   handleClick: React.MouseEventHandler<HTMLButtonElement>;
   inlineStyle?: CSSProperties;
 };

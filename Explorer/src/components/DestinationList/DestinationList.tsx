@@ -1,8 +1,8 @@
 import styles from "./DestinationList.module.scss";
 import { destinationListProps } from "../../pages/HomePage/HomePagePropDefinitions";
 import React from "react";
-import HeaderText from "../HeaderText/HeaderText.tsx";
-import DestinationCard from "../DestinationCard/DestinationCard.tsx";
+import HeaderText from "../HeaderText/HeaderText";
+import DestinationCard from "../DestinationCard/DestinationCard";
 
 /**
  * Represents all destination with details.
@@ -20,7 +20,7 @@ const DestinationList = ({
   header,
   catchPhase,
   destinations,
-  inlineStyle
+  inlineStyle,
 }: destinationListProps): React.ReactElement => {
   const destinationCards = destinations.map((destination, key) => {
     return (

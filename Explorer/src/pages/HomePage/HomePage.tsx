@@ -4,7 +4,7 @@ import Promo from "../../components/Promo/Promo";
 import {
   DESTINATION_HEADER,
   DESTINATION_CATCH_PHRASE,
-} from "../../constants/index.tsx";
+} from "../../constants/index";
 import destinationDetails from "../../assets/data/placeDetails.json";
 
 /**

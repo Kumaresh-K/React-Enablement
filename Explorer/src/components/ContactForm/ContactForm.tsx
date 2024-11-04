@@ -16,7 +16,7 @@ import {
   SAME_LOCATION_ERROR,
   PHONE_NUMBER_EMPTY_ERROR,
   PHONE_NUMBER_INVALID_ERROR,
-  CONTACT_FORM_SUBMISSION_BUTTON_NAME
+  CONTACT_FORM_SUBMISSION_BUTTON_NAME,
 } from "../../constants";
 
 /**
@@ -78,7 +78,7 @@ const ContactForm = ({ tripDetails }: contactFormProps): React.ReactElement => {
   return (
     <form className={styles.contactForm}>
       <span className={styles.inputWrapper}>
-        <label>Name</label>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           name="name"
@@ -92,8 +92,9 @@ const ContactForm = ({ tripDetails }: contactFormProps): React.ReactElement => {
         )}
       </span>
       <span className={styles.inputWrapper}>
-        <label>Your Home Town</label>
+        <label htmlFor="startingPoint">Your Home Town</label>
         <select
+          id="startingPoint"
           name="startingPoint"
           defaultValue={"Choose"}
           className={styles.destinationDropdown}
@@ -108,8 +109,9 @@ const ContactForm = ({ tripDetails }: contactFormProps): React.ReactElement => {
         )}
       </span>
       <span className={styles.inputWrapper}>
-        <label>Where would you like to go?</label>
+        <label htmlFor="endingPoint">Where would you like to go?</label>
         <select
+          id="endingPoint"
           name="endingPoint"
           defaultValue={"Choose"}
           className={styles.destinationDropdown}
@@ -124,8 +126,9 @@ const ContactForm = ({ tripDetails }: contactFormProps): React.ReactElement => {
         )}
       </span>
       <span className={styles.inputWrapper}>
-        <label>Contact Number</label>
+        <label htmlFor="phoneNumber">Contact Number</label>
         <input
+          id="phoneNumber"
           name="phoneNumber"
           type="tel"
           onChange={(e) => {

@@ -1,9 +1,9 @@
 import styles from "./DestinationCard.module.scss";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
-import { DESTINATION_BUTTON_NAME } from "../../constants/index.tsx";
-import useNavigationService from "../../services/NavigationService.tsx";
+import { DESTINATION_BUTTON_NAME } from "../../constants/index";
+import useNavigationService from "../../services/NavigationService";
 import { destinationCardProps } from "../../pages/HomePage/HomePagePropDefinitions";
-import { formatString } from "../../services/PlaceServices.tsx";
+import { formatString } from "../../services/PlaceServices";
 
 /**
  * Represents Destination card that contains the details of the single destination.
@@ -27,7 +27,9 @@ const DestinationCard = ({
       <img src={`/src/assets/${city}.png`} alt={city + " cover image"} />
       <div className={styles.catchPhrase}>{catchPhrase}</div>
       <div className={styles.city}>{city}</div>
-      <div className={styles.shortDescription}>{formatString(shortDescription)}</div>
+      <div className={styles.shortDescription}>
+        {formatString(shortDescription)}
+      </div>
       <PrimaryButton
         buttonContent={DESTINATION_BUTTON_NAME}
         handleClick={(e) => {

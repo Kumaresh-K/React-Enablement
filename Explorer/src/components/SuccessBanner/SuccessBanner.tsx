@@ -18,7 +18,7 @@ const SuccessBanner = ({
   endingPoint,
 }: successBannerProps): React.ReactElement => {
   return (
-    <div className={styles.successBanner}>
+    <div className={styles.successBanner} data-testid='banner'>
       Thank You <strong>{name}</strong> for expressing your interest in
       travelling with us. Our Sales team will get back with the best packages
       from <strong>{startingPoint}</strong> to

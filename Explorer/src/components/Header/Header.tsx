@@ -19,7 +19,7 @@ const Header = (): React.ReactElement => {
           src={ExplorerLogo}
           alt="explorer logo"
           onClick={() => {
-            navigate("/places");
+            navigate("/");
           }}
         />
         <NavBar />

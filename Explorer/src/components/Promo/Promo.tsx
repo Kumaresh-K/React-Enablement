@@ -1,6 +1,6 @@
 import CoverImage from "../../assets/cover.png";
 import styles from "./Promo.module.scss";
-import DestinationNavigator from "../DestinationNavigator/DestinationNavigator.tsx";
+import DestinationNavigator from "../DestinationNavigator/DestinationNavigator";
 
 /**
  * Represents a promo component.
@@ -18,7 +18,7 @@ const Promo = (): React.ReactElement => {
           Your Adventure Travel Expert in the
           <span className={styles.bold}> SOUTH</span>
         </span>
-      <DestinationNavigator />
+        <DestinationNavigator />
       </div>
       <div className={styles.promoCoverImage}>
         <img src={CoverImage} alt="A biker rides the bike in the mountains" />

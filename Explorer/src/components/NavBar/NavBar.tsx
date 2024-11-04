@@ -12,7 +12,12 @@ const NavBar = (): JSX.Element => {
   const menuList = NAVIGATION_DATA.map((menuItem, key) => {
     return (
       <li className={styles.menuItem} key={key}>
-        <NavLink to={menuItem.menuNavigationPath}>{menuItem.menuName}</NavLink>
+        <NavLink
+          to={menuItem.menuNavigationPath}
+          className={({ isActive }) => (isActive ? styles.activeLink : "")}
+        >
+          {menuItem.menuName}
+        </NavLink>
       </li>
     );
   });

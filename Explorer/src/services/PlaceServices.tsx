@@ -17,7 +17,7 @@ export function getPlaces(destinations: string[]) {
 }
 
 export function formatString(data : string) {
-    var string = data.replace(/\[\d+\]/g, " ");
+    let string = data.replace(/\[\d+\]/g, " ");
     string = string.replace(/\\n/g, '<br/>');
     return  string.trim();  
 }

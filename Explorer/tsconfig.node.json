@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "composite": true,         // Enable composite project
+    "declaration": true,       // Enable declaration file generation
+    "outDir": "./dist",        // Output directory for compiled files
+    "emitDeclarationOnly": false, // Ensure this is set to false
+    "jsx": "react-jsx", 
     "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
@@ -7,10 +12,10 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    // "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false,
 
     /* Linting */
     "strict": true,
