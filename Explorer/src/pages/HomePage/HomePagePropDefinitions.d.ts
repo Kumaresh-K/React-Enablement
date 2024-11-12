@@ -1,10 +1,10 @@
 import exp from "constants";
 import { CSSProperties } from "react";
+import { ChangeEventHandler } from "react";
 
-export type primaryButtonProp = {
+export type ButtonProp = {
   buttonContent: string;
   handleClick: React.MouseEventHandler<HTMLButtonElement>;
-  inlineStyle?: CSSProperties;
 };
 
 export type placeAttributes = {
@@ -19,7 +19,7 @@ export type destinationListProps = {
   header: string;
   catchPhase: string;
   destinations: placeAttributes[];
-  inlineStyle?: CSSProperties;
+  className?: string;
 };
 
 export type destinationCardProps = {
@@ -28,10 +28,10 @@ export type destinationCardProps = {
   shortDescription: string;
 };
 
-export type headerTextProps = {
+export type headerProps = {
   title: string;
   content: string;
-  inlineStyle?: CSSProperties;
+  className?: string;
 };
 
 export type userData = {
@@ -54,7 +54,7 @@ export type contactFormProps = {
 };
 
 export type contactUsProps = {
-  inlineStyle?: CSSProperties;
+  className?: string;
 };
 
 export type successBannerProps = {
@@ -62,4 +62,14 @@ export type successBannerProps = {
   startingPoint: string;
   endingPoint: string;
   phoneNumber?: string;
+};
+
+export type TextInputProps = {
+  id: string;
+  inputLabel?: string;
+  onChange: ChangeEventHandler<HTMLInputElement>;
+};
+
+export type errorMessageProps = {
+  content: string;
 };

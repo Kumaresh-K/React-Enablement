@@ -1,5 +1,5 @@
 import styles from "./DestinationCard.module.scss";
-import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import Button from "../Button/Button";
 import { DESTINATION_BUTTON_NAME } from "../../constants/index";
 import useNavigationService from "../../services/NavigationService";
 import { destinationCardProps } from "../../pages/HomePage/HomePagePropDefinitions";
@@ -30,7 +30,7 @@ const DestinationCard = ({
       <div className={styles.shortDescription}>
         {formatString(shortDescription)}
       </div>
-      <PrimaryButton
+      <Button
         buttonContent={DESTINATION_BUTTON_NAME}
         handleClick={(e) => {
           e.preventDefault();

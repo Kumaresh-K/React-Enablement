@@ -1,28 +1,24 @@
 import "@testing-library/jest-dom";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Header from "../components/Header/Header";
-import { MemoryRouter } from "react-router-dom";
 
-const renderWithRouter = () => {
-  return render(
-    <MemoryRouter>
-      <Header />
-    </MemoryRouter>
-  );
+const mockProps = {
+  title: "Iron Man",
+  content: "The Movie from 2008",
+  inlineStyle: { color: "red" },
 };
 
 describe("Header Component", () => {
-  renderWithRouter();
-  it("renders image with navigation functionlity", () => {
-    const image = screen.getByRole("img");
-    expect(image).toHaveAttribute("src", "test-file-stub");
-    expect(image).toHaveAttribute("alt", "explorer logo");
-    fireEvent.click(image);
-    expect(screen.getByRole("img")).toBeInTheDocument();
+  it("contains the provided details", () => {
+    render(<Header {...mockProps} />);
+    expect(screen.getByText(mockProps.title)).toBeInTheDocument();
+    expect(screen.getByText(mockProps.content)).toBeInTheDocument();
   });
 
-  it("have the navigation component", () => {
-    renderWithRouter();
-    expect(screen.getByText("Hotels")).toBeInTheDocument();
+  it("has the inline styles", () => {
+    render(<Header {...mockProps} />);
+    expect(screen.getByTestId("content-container")).toHaveStyle(
+      `color : ${mockProps.inlineStyle.color}`
+    );
   });
 });

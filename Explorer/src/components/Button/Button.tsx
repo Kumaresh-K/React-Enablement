@@ -1,5 +1,5 @@
-import styles from "./PrimaryButton.module.scss";
-import { primaryButtonProp } from "../../pages/HomePage/HomePagePropDefinitions";
+import styles from "./Button.module.scss";
+import { ButtonProp } from "../../pages/HomePage/HomePagePropDefinitions";
 
 /**
  * Represents a user profile component.
@@ -11,16 +11,15 @@ import { primaryButtonProp } from "../../pages/HomePage/HomePagePropDefinitions"
  * @returns {React.ReactElement} A button element.
  */
 
-const PrimaryButton = ({
+const Button = ({
   buttonContent,
   handleClick,
-  inlineStyle
-}: primaryButtonProp): React.ReactElement => {
+}: ButtonProp): React.ReactElement => {
   return (
-    <button onClick={handleClick} className={styles.primaryButton} style={inlineStyle}>
+    <button onClick={handleClick} className={styles.Button}>
       {buttonContent}
     </button>
   );
 };
 
-export default PrimaryButton;
+export default Button;

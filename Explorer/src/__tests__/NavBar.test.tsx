@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import NavBar from "../components/NavBar/NavBar";
 import { NAVIGATION_DATA } from "../constants";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import Header from "../components/Header/Header";
+import Header from "../components/PageHeader/PageHeader";
 import HomePage from "../pages/HomePage/HomePage";
 import PageDown from "../components/PageDown/PageDown";
 

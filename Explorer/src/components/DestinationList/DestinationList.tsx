@@ -1,7 +1,7 @@
 import styles from "./DestinationList.module.scss";
 import { destinationListProps } from "../../pages/HomePage/HomePagePropDefinitions";
 import React from "react";
-import HeaderText from "../HeaderText/HeaderText";
+import Header from "../Header/Header";
 import DestinationCard from "../DestinationCard/DestinationCard";
 
 /**
@@ -12,7 +12,7 @@ import DestinationCard from "../DestinationCard/DestinationCard";
  * @param {string} props.header - The header name.
  * @param {string} props.catchPhase - The sub header or catch phase.
  * @param {string} props.destination - The name of the city.
- * @param {React.CSSProperties} props.inlineStyle - Inline style for the component.
+ * @param {string} props.className - Style for the component.
  * @returns {React.ReactElement} the all destination element.
  */
 
@@ -20,7 +20,7 @@ const DestinationList = ({
   header,
   catchPhase,
   destinations,
-  inlineStyle,
+  className,
 }: destinationListProps): React.ReactElement => {
   const destinationCards = destinations.map((destination, key) => {
     return (
@@ -34,8 +34,8 @@ const DestinationList = ({
   });
 
   return (
-    <section className={styles.destinations} style={inlineStyle}>
-      <HeaderText title={header} content={catchPhase} />
+    <section className={`${styles.destinations} ${styles[className ?? ""]}`}>
+      <Header title={header} content={catchPhase} />
       <div className={styles.destinationCardsContainer}>{destinationCards}</div>
     </section>
   );

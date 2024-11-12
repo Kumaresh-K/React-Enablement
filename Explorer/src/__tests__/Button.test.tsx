@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen, fireEvent } from "@testing-library/react";
-import PrimaryButton from "../components/PrimaryButton/PrimaryButton";
+import Button from "../components/Button/Button";
 
 const mockProps = {
   buttonContent: "Click me",
@@ -8,9 +8,9 @@ const mockProps = {
   inlineStyle: { backgroundColor: "blue", color: "white" },
 };
 
-describe("PrimaryButton Component", () => {
+describe("Button Component", () => {
   it("renders button with correct content", () => {
-    render(<PrimaryButton {...mockProps} />);
+    render(<Button {...mockProps} />);
     const button = screen.getByRole("button", {
       name: mockProps.buttonContent,
     });
@@ -19,7 +19,7 @@ describe("PrimaryButton Component", () => {
   });
 
   it("calls handleClick when clicked", () => {
-    render(<PrimaryButton {...mockProps} />);
+    render(<Button {...mockProps} />);
     const button = screen.getByRole("button", {
       name: mockProps.buttonContent,
     });
@@ -28,7 +28,7 @@ describe("PrimaryButton Component", () => {
   });
 
   it("applies inline styles correctly", () => {
-    render(<PrimaryButton {...mockProps} />);
+    render(<Button {...mockProps} />);
     const button = screen.getByRole("button", {
       name: mockProps.buttonContent,
     });

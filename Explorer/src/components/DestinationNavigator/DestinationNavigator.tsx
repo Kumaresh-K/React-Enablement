@@ -1,8 +1,8 @@
-import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import Button from "../Button/Button";
 import styles from "./DestinationNavigator.module.scss";
 import useNavigationService from "../../services/NavigationService";
-import destinationChoices from "../../assets/data/placeDetails.json";
 import { useRef } from "react";
+import DestinationDropdownInput from "../DestinationDropdownInput/DestinationDropdownInput";
 
 /**
  * Represents a destination navigation component.
@@ -10,23 +10,6 @@ import { useRef } from "react";
  * @component
  * @returns {React.ReactElement} A navigation element.
  */
-
-const choiceList = destinationChoices.map((destination, key) => {
-  return (
-    <option value={destination.city} key={key}>
-      {destination.city}
-    </option>
-  );
-});
-
-export const dropDownOptions = (
-  <>
-    <option value="Choose" disabled>
-      Choose
-    </option>
-    {choiceList}
-  </>
-);
 
 const DestinationNavigator = (): React.ReactElement => {
   const destination = useRef("");
@@ -37,16 +20,14 @@ const DestinationNavigator = (): React.ReactElement => {
 
   return (
     <form className={styles.destinationSelector}>
-      <select
-        defaultValue={"Choose"}
+      <DestinationDropdownInput
+        id="startingPoint"
         className={styles.destinationDropdown}
-        onChange={(event) => {
-          destination.current = event.target.value;
+        onChange={(e) => {
+          destination.current = e.target.value;
         }}
-      >
-        {dropDownOptions}
-      </select>
-      <PrimaryButton
+      />
+      <Button
         buttonContent="EXPLORE"
         handleClick={() => {
           handleClick(destination.current);

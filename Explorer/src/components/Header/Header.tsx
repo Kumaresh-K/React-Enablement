@@ -1,31 +1,30 @@
-import ExplorerLogo from "../../assets/logo.png";
-import NavBar from "../NavBar/NavBar";
+import { headerProps } from "../../pages/HomePage/HomePagePropDefinitions";
 import styles from "./Header.module.scss";
-import { Outlet, useNavigate } from "react-router-dom";
 
 /**
- * Represents a Header component that contains logo and nav bar.
+ * Represents a header component for sections.
  *
  * @component
- * @returns {React.ReactElement} a header element.
+ * @param {Object} props - The component props.
+ * @param {string} props.title - The name of the header.
+ * @param {string} props.content - The content of the header.
+ * @param {React.CSSProperties} props.inlineStyle - inline style for the header component
+ * @returns {React.ReactElement} A user profile element.
  */
 
-const Header = (): React.ReactElement => {
-  let navigate = useNavigate();
+const Header = ({
+  title,
+  content,
+  className,
+}: headerProps): React.ReactElement => {
   return (
-    <>
-      <header className={styles.topBar}>
-        <img
-          src={ExplorerLogo}
-          alt="explorer logo"
-          onClick={() => {
-            navigate("/");
-          }}
-        />
-        <NavBar />
-      </header>
-      <Outlet />
-    </>
+    <span
+      className={`${styles.titleContainer} ${styles[className ?? ""]}`}
+      data-testid="content-container"
+    >
+      <div className={styles.title}>{title}</div>
+      <div className={styles.content}>{content}</div>
+    </span>
   );
 };
 

@@ -1,0 +1,18 @@
+//TextInput Component
+label {
+  font-size: 23px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+input {
+  font-size: 18px;
+  color: rgb(0, 0, 0, 0.5);
+  height: 4.57rem;
+  width: 44.15rem;
+  padding-left: 33px;
+  border: 1px solid #00000071;
+  background-color: transparent;
+}
+input:focus {
+  outline: none;
+}

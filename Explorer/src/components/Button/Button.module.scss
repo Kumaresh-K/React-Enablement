@@ -1,5 +1,5 @@
-//PrimaryButton Component
-.primaryButton {
+//Button Component
+.Button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -9,4 +9,7 @@
   color: #ffffff;
   height: 47px;
   width: 160px;
+}
+.Button:hover {
+  cursor: pointer;
 }

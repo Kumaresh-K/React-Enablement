@@ -1,6 +1,6 @@
 import styles from "./ContactUs.module.scss";
 import ContactForm from "../ContactForm/ContactForm";
-import HeaderText from "../HeaderText/HeaderText";
+import Header from "../Header/Header";
 import SuccessBanner from "../SuccessBanner/SuccessBanner";
 import { CONTACT_HEADER, CONTACT_CONTENT } from "../../constants";
 import { useState } from "react";
@@ -18,7 +18,7 @@ import {
  * @returns {React.ReactElement} A contact section element.
  */
 
-const ContactUs = ({ inlineStyle }: contactUsProps): React.ReactElement => {
+const ContactUs = ({ className }: contactUsProps): React.ReactElement => {
   const [userData, setUserData] = useState({
     name: "",
     startingPoint: "",
@@ -28,12 +28,12 @@ const ContactUs = ({ inlineStyle }: contactUsProps): React.ReactElement => {
   });
 
   return (
-    <div className={styles.contactSection} style={inlineStyle}>
+    <div className={`${styles.contactSection} ${styles[className ?? ""]}`}>
       <div className={styles.contactHeaderSection}>
-        <HeaderText
+        <Header
           title={CONTACT_HEADER}
           content={CONTACT_CONTENT}
-          inlineStyle={{ paddingBottom: "1.1rem" }}
+          className="contactUsContainer"
         />
       </div>
       <ContactForm

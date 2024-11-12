@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import PlaceFocusPromo from "../../components/PlaceFocusPromo/PlaceFocusPromo";
 import DestinationList from "../../components/DestinationList/DestinationList";
 import { getPlace, getPlaces } from "../../services/PlaceServices";
@@ -15,6 +15,10 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 const DestinationProfile = (): React.ReactElement => {
   const { name } = useParams();
   const place = getPlace(name);
+  if (!place) {
+    return <Navigate to="/" />;
+  }
+  window.scrollTo(0, 0); //Scroll to top
   const relatedPlaces = getPlaces(place.relatedPlaces);
   return (
     <>
@@ -23,9 +27,9 @@ const DestinationProfile = (): React.ReactElement => {
         header={SUGGESTION_HEADER}
         catchPhase={`Because you liked ${place.city}`}
         destinations={relatedPlaces}
-        inlineStyle={{ marginBottom: "93px" }}
+        className="destinationProfileList"
       />
-      <ContactUs inlineStyle={{ padding: "5.1% 0px 4.5%" }} />
+      <ContactUs className="DestinationProfileContactUs" />
     </>
   );
 };

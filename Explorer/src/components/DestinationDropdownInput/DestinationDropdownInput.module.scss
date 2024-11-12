@@ -1,0 +1,23 @@
+//DestinationDropdownInput Component
+label {
+  font-size: 23px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+select {
+  font-size: 18px;
+  color: rgb(0, 0, 0, 0.5);
+  height: 4.57rem;
+  width: 44.15rem;
+  padding-left: 33px;
+  border: 1px solid #00000071;
+  background-color: transparent;
+  appearance: none;
+  background-image: url("src/assets/drop-down-arrow.png");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: 96% center;
+}
+select:focus {
+  outline: none;
+}
