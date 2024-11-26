@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import DestinationNavigator from "../components/DestinationNavigator/DestinationNavigator";
 import PlaceFocusPromo from "../components/PlaceFocusPromo/PlaceFocusPromo";
 import destinations from "../assets/data/placeDetails.json";
@@ -38,13 +38,18 @@ describe("DestinationNavigator Component", () => {
     });
   });
 
-  it("navigates to selected destination", () => {
+  it("navigates to selected destination", async () => {
     const navigateMock = useNavigationService();
     renderWithRouter();
     const destinationDropdown = screen.getByRole("combobox");
+
     fireEvent.change(destinationDropdown, { target: { value: "Pollachi" } });
     const exploreButton = screen.getByText("EXPLORE");
+
     fireEvent.click(exploreButton);
-    expect(navigateMock).toHaveBeenCalledWith("Pollachi");
+
+    await waitFor(() => {
+      expect(navigateMock).toHaveBeenCalledWith("Pollachi");
+    });
   });
 });

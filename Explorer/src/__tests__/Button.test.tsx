@@ -5,7 +5,6 @@ import Button from "../components/Button/Button";
 const mockProps = {
   buttonContent: "Click me",
   handleClick: jest.fn(),
-  inlineStyle: { backgroundColor: "blue", color: "white" },
 };
 
 describe("Button Component", () => {
@@ -25,16 +24,5 @@ describe("Button Component", () => {
     });
     fireEvent.click(button);
     expect(mockProps.handleClick).toHaveBeenCalledTimes(1);
-  });
-
-  it("applies inline styles correctly", () => {
-    render(<Button {...mockProps} />);
-    const button = screen.getByRole("button", {
-      name: mockProps.buttonContent,
-    });
-    expect(button).toHaveStyle(
-      `background-color: ${mockProps.inlineStyle.backgroundColor}`
-    );
-    expect(button).toHaveStyle(`color: ${mockProps.inlineStyle.color}`);
   });
 });

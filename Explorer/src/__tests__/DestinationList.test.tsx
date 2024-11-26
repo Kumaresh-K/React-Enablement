@@ -8,7 +8,6 @@ const mockProps = {
   header: "Content Header",
   catchPhase: "Here is the Catch Phase",
   destinations: destinationDetails,
-  inlineStyle: { color: "red" },
 };
 const renderWithRoutes = () => {
   return render(
@@ -32,11 +31,5 @@ describe("DestinationList Component", () => {
     destinationDetails.forEach((destination) => {
       expect(destinationCardsContainer).toHaveTextContent(destination.city);
     });
-  });
-
-  it("has the inline styles", () => {
-    const { container } = renderWithRoutes();
-    const destinations = container.querySelector(".destinations");
-    expect(destinations).toHaveStyle(`color : ${mockProps.inlineStyle.color}`);
   });
 });

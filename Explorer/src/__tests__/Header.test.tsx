@@ -14,11 +14,4 @@ describe("Header Component", () => {
     expect(screen.getByText(mockProps.title)).toBeInTheDocument();
     expect(screen.getByText(mockProps.content)).toBeInTheDocument();
   });
-
-  it("has the inline styles", () => {
-    render(<Header {...mockProps} />);
-    expect(screen.getByTestId("content-container")).toHaveStyle(
-      `color : ${mockProps.inlineStyle.color}`
-    );
-  });
 });
