@@ -1,0 +1,12 @@
+.navigationLink {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    height: 45px;
+  }
+  .activeLink {
+    border-bottom: 9px solid black;
+  }
+}

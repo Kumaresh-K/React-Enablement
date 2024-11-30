@@ -1,0 +1,13 @@
+//PageHeader Component
+.pageHeader {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  height: 72px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 23px 47px 0px 45px;
+  box-shadow: 0px -1px 7px 2px #0000003b;
+  background-color: #fff;
+}

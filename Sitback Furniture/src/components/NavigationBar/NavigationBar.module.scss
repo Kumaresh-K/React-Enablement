@@ -1,0 +1,12 @@
+//NavigationBar Component
+.navigationBar {
+  width: 340px;
+  ul {
+    font-size: 14.5px;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5px 0px 0px 25px;
+  }
+}

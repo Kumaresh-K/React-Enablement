@@ -1,0 +1,14 @@
+//UserProfile Component
+.userProfile {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    .userName {
+        font-size: 13px;
+        font-weight: 600;
+        padding-right: 10px;
+    }
+    img {
+        width: 7px;
+    }
+}
