@@ -1,0 +1,22 @@
+//DestinationNavigation element
+.destinationSelector {
+  position: relative;
+  z-index: 1;
+  .destinationDropdown {
+    font-size: 18px;
+    opacity: 0.5;
+    height: 4.57rem;
+    width: 44.15rem;
+    padding-left: 33px;
+    border: 1.5px solid #000000;
+    margin-bottom: 22px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+    background-image: none;
+  }
+  .destinationDropdown:focus {
+    outline: none;
+  }
+}

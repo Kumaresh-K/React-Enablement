@@ -1,0 +1,17 @@
+.pageDownContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 9rem 0;
+  img {
+    width: 500px;
+  }
+  .pageNotAvailable {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 20px 0px;
+  }
+  .pageNotAvailableInfo {
+    font-size: 20px;
+  }
+}

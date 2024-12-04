@@ -1,0 +1,31 @@
+//Promo element
+.promoBanner {
+  display: inline-flex;
+  flex-direction: row;
+  color: #7a1655;
+  margin-bottom: 6.1rem;
+  .promoContent {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10.1% 0px 0px 8.6%;
+    width: 42.25%;
+    .welcomeText {
+      font-size: 24px;
+      font-weight: 500;
+      opacity: 0.7;
+      margin-bottom: 35px;
+    }
+    .promoStatement {
+      font-weight: 300;
+      font-size: 73px;
+      margin-bottom: 5.15rem;
+      line-height: 5.45rem;
+    }
+    .bold {
+      font-weight: 500;
+    }
+  }
+  .promoCoverImage {
+    width: 57.75%;
+  }
+}

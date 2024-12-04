@@ -1,0 +1,14 @@
+//ContactUs Component
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 5.1% 0px 3.7%;
+  &.DestinationProfileContactUs {
+    padding: 5.1% 0px 4.5%;
+  }
+  .contactHeaderSection {
+    width: 44.5rem;
+  }
+}

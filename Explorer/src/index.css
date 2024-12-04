@@ -1,0 +1,12 @@
+/* Global definitions */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
