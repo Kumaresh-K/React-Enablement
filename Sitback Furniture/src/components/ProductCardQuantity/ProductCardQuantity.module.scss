@@ -1,0 +1,23 @@
+.productQuantity {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  width: 77px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 9px 1px rgba(0, 0, 0, 0.1);
+  padding: 3px 0px 3px 0.5px;
+  button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+  }
+  .negative {
+    font-size: 17px;
+  }
+  .positive {
+    font-size: 13px;
+    font-weight: 500;
+  }
+}

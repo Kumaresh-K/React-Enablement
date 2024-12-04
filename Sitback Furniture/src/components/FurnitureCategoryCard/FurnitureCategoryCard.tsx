@@ -13,7 +13,9 @@ import { useNavigate } from 'react-router-dom'
  * @returns {React.ReactElement} - a furniture card element.
  */
 
-const FurnitureCategoryCard = ({ furniture }: FurnitureCategoryCardProps): React.ReactElement => {
+const FurnitureCategoryCard = ({
+  furniture,
+}: FurnitureCategoryCardProps): React.ReactElement => {
   const navigate = useNavigate()
   return (
     <section className={styles.furnitureCategoryCard}>
@@ -24,7 +26,12 @@ const FurnitureCategoryCard = ({ furniture }: FurnitureCategoryCardProps): React
       />
       <div className={styles.funitureCategory}>{furniture.category}</div>
       <div className={styles.aboutFuniture}>{furniture.description}</div>
-      <Button name={FURNITURE_CATEGORY_BUTTON_NAME} handleClick={()=>{navigate(`/categories/${furniture.category}`)}}/>
+      <Button
+        name={FURNITURE_CATEGORY_BUTTON_NAME}
+        handleClick={() => {
+          navigate(`/categories/${furniture.id}`)
+        }}
+      />
     </section>
   )
 }

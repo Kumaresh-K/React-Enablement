@@ -2,7 +2,7 @@ import styles from './Button.module.scss'
 import { ButtonProps } from '../../pages/HomePage/HomePageProps'
 
 /**
- * Represents a button component.
+ * Represents a primary button component.
  *
  * @component
  * @param {Object} props - The component props.
@@ -11,9 +11,16 @@ import { ButtonProps } from '../../pages/HomePage/HomePageProps'
  * @returns {React.ReactElement} A button element.
  */
 
-const Button = ({ name, handleClick }: ButtonProps): React.ReactElement => {
+const Button = ({
+  name,
+  handleClick,
+  secondary,
+}: ButtonProps): React.ReactElement => {
   return (
-    <button onClick={handleClick} className={styles.button}>
+    <button
+      onClick={handleClick}
+      className={secondary ? styles.secondaryButton : styles.button}
+    >
       {name}
     </button>
   )

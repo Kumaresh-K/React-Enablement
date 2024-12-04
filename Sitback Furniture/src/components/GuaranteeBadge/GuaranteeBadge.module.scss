@@ -1,0 +1,18 @@
+//GuaranteeBadge Component
+.guaranteeInfo {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  img {
+    width: 15px;
+  }
+  .info {
+    .fontSizeForYear {
+        font-size: 12px;
+    }
+    padding: 0px 5px;
+    color: #008800;
+    font-size: 13px;
+    font-weight: 500;
+  }
+}

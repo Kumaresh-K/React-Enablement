@@ -33,6 +33,7 @@ export type PromotionContentProps = {
 export type ButtonProps = {
   name: string
   handleClick: () => void
+  secondary ?: boolean
 }
 
 export type LoadingScreenProps = {
