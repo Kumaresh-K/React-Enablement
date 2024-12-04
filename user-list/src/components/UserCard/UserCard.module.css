@@ -1,0 +1,50 @@
+/* UserCard component */
+.card {
+    display: flex;
+    min-height: 18.6rem;
+    width: 29.1rem;
+    background-color: #fbfcff;
+    border-radius: 20px;
+}
+.card:hover {
+    border: 1px solid #6c86dba6;
+    box-shadow: 0px 5px 10px 0px #0000001a;
+}
+.container {
+    width: 39%;
+}
+.image {
+    margin: 33px 30px;
+    height: 140px;
+    width: 140px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.details {
+    padding: 62px 10px 10px;
+    width: 61%;
+}
+.name {
+    font-family: "Merriweather", serif;
+    display: inline-block;
+    margin-bottom: 7px;
+    font-size: 26px;
+    font-weight: 800;
+}
+.location {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.tags {
+    height: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 10px 2px;
+    font-size: 18px;
+    font-weight: 500;
+    overflow-y: scroll;
+}
