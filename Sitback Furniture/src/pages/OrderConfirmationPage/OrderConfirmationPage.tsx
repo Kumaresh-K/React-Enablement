@@ -8,7 +8,7 @@ import { ORDER_HEADLINE, ORDER_TAGLINE } from '../../constants'
  * Represents the order confirmation page.
  *
  * @component
- * @returns {React.ReactElement} the order confirmation page element.
+ * @returns {React.ReactElement} the order confirmation page element with items.
  */
 
 const OrderConfirmationPage = (): React.ReactElement => {
