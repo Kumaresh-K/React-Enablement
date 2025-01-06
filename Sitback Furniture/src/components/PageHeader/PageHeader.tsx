@@ -1,7 +1,6 @@
 import styles from './PageHeader.module.scss'
 import NavigationBar from '../NavigationBar/NavigationBar'
 import UserProfile from '../UserProfile/UserProfile'
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 import BrandName from '../BrandName/BrandName'
 import { FurnitureDataAsProps } from '../../pages/HomePage/HomePageProps'
 
@@ -18,13 +17,11 @@ const PageHeader = ({
   furnitureDetails,
 }: FurnitureDataAsProps): React.ReactElement => {
   return (
-    <ErrorBoundary>
-      <div className={styles.pageHeader}>
-        <BrandName />
-        <NavigationBar furnitureDetails={furnitureDetails} />
-        <UserProfile name='Nijin Vinodan' />
-      </div>
-    </ErrorBoundary>
+    <div className={styles.pageHeader}>
+      <BrandName />
+      <NavigationBar furnitureDetails={furnitureDetails} />
+      <UserProfile name='Nijin Vinodan' />
+    </div>
   )
 }
 

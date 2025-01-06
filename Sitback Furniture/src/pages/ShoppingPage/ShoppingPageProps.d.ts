@@ -1,15 +1,20 @@
-export type FurnitureStructure = {
+export type FurnitureAttributes = {
   description: string
   guarantee: number
-  id: number
+  id: number | string
   name: string
   photo: string
   price: string
   rating: number
+  quantity: number
+}
+
+export type FurnitureStructure = {
+  [id: number | string]: FurnitureAttributes
 }
 
 export type FurnitureCardProps = {
-  furniture: FurnitureStructure
+  furniture: FurnitureAttributes
 }
 
 export type FurnitureListProps = {
@@ -25,9 +30,14 @@ export type ProductPriceProps = {
   price: string | number
 }
 
+export type PaymentSectionProps = {
+  amount: string | number
+}
+
+export type ProductCardQuantityProps = {
+  furnitureID: number | string
+}
+
 export type ProductPanelCardProps = {
-  id: number
-  name: string
-  photo: string
-  price: string
+  furniture: FurnitureAttributes
 }

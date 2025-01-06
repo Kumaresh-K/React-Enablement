@@ -9,7 +9,6 @@ import Footer from '../../components/Footer/Footer'
 import useAPI from '../../hooks/useAPI'
 import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
 import PageDown from '../../components/PageDown/PageDown'
-import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary'
 
 /**
  * Represents the home page.
@@ -20,10 +19,10 @@ import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary'
 
 const HomePage = (): React.ReactElement => {
   const { data, loading, error } = useAPI('categories')
-  if (loading) return <LoadingScreen className='verticalHorizontalCenter'/>
+  if (loading) return <LoadingScreen className='verticalHorizontalCenter' />
   if (error) return <PageDown />
   return (
-    <ErrorBoundary>
+    <>
       <div className={styles.FurnitureShowcase}>
         <PromotionContent
           headline={FURNITURE_CATEGORY_HEADLINE}
@@ -32,7 +31,7 @@ const HomePage = (): React.ReactElement => {
         <FurnitureCategoryList furnitureDetails={data ?? []} />
       </div>
       <Footer />
-    </ErrorBoundary>
+    </>
   )
 }
 

@@ -2,7 +2,7 @@ export type NavigationLinkProps = {
   category: string
 }
 
-export type FurnitureStructure = {
+export type FurnitureCategoryStructure = {
   id: string
   photo: string
   category: string
@@ -10,7 +10,7 @@ export type FurnitureStructure = {
 }
 
 export type FurnitureDataAsProps = {
-  furnitureDetails: furnitureStructure[]
+  furnitureDetails: FurnitureCategoryStructure[]
 }
 
 export type ErrorBoundaryProps = {
@@ -22,20 +22,21 @@ export type ErrorBoundaryState = {
 }
 
 export type FurnitureCategoryCardProps = {
-  furniture: furnitureStructure
+  furniture: FurnitureCategoryStructure
 }
 
 export type PromotionContentProps = {
   headline: string
   tagline: string
+  customStyle ?: string
 }
 
 export type ButtonProps = {
   name: string
   handleClick: () => void
-  secondary ?: boolean
+  secondary?: boolean
 }
 
 export type LoadingScreenProps = {
-  className ?: string
+  className?: string
 }

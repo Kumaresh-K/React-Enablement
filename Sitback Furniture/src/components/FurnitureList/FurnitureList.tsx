@@ -1,22 +1,48 @@
-import styles from './FurnitureList.module.scss'
 import { FurnitureListProps } from '../../pages/ShoppingPage/ShoppingPageProps'
 import FurnitureCard from '../FurnitureCard/FurnitureCard'
-import ProductPanel from '../ProductPanel/ProductPanel'
 import CartAndWishlist from '../CartAndWishlist/CartAndWishlist'
+import styles from './FurnitureList.module.scss'
+import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { useContext } from 'react'
+import classNames from 'classnames'
 
-const FurnitureList = ({ furnitures }: FurnitureListProps) => {
-  const availableFurniture = furnitures.map((furniture, key) => {
-    return <FurnitureCard furniture={furniture} key={key} />
-  })
+/**
+ * Represents a Furniture List component.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {string} props.furnitures - The list of furnitures details.
+ * @returns {React.ReactElement} the list of furniture cards element.
+ */
+
+const FurnitureList = ({
+  furnitures,
+}: FurnitureListProps): React.ReactElement => {
+  const { isTabVisible } = useContext(CustomerShoppingContext)
+
+  const availableFurniture = furnitures.map((furniture, key) => (
+    <FurnitureCard furniture={furniture} key={key} />
+  ))
 
   return (
     <main className={styles.shopping}>
-      <section className={styles.furnitureListHero}>
+      <section
+        className={classNames(styles.furnitureListHero, {
+          [styles.showTab]: isTabVisible,
+        })}
+      >
         <div className={styles.whiteBlock}></div>
-        <div className={styles.furnitureList}>{availableFurniture}</div>
+        <div
+          className={classNames(styles.furnitureList, {
+            [styles.threeColumnList]: isTabVisible,
+          })}
+        >
+          {availableFurniture}
+        </div>
       </section>
-      <CartAndWishlist />
+      {isTabVisible && <CartAndWishlist />}
     </main>
   )
 }
+
 export default FurnitureList

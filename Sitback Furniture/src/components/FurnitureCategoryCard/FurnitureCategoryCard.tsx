@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom'
  * @component
  * @param {Object} props - The component props.
  * @param {string} props.furniture - contains the all necessary info about particular furniture.
- * @returns {React.ReactElement} - a furniture card element.
+ * @returns {React.ReactElement} - a furniture category card element.
  */
 
 const FurnitureCategoryCard = ({

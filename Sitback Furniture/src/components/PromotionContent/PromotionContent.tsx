@@ -14,9 +14,12 @@ import { PromotionContentProps } from '../../pages/HomePage/HomePageProps'
 const PromotionContent = ({
   headline,
   tagline,
+  customStyle,
 }: PromotionContentProps): React.ReactElement => {
   return (
-    <section className={styles.promotion}>
+    <section
+      className={customStyle?styles[customStyle]:styles.promotion}
+    >
       <div className={styles.headline}>{headline}</div>
       <div className={styles.tagline}>{tagline}</div>
     </section>

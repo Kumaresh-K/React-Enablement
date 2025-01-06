@@ -1,26 +1,31 @@
-import { useState, useEffect } from 'react'
+import { useContext } from 'react'
 import { PANELS } from '../../constants'
+import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
 import styles from './PanelHeader.module.scss'
-import classNames from 'classnames'
 
-const PanelHeader = () => {
-  const [panel, setPanel] = useState('cart')
+/**
+ * Represents a panel header component.
+ *
+ * @component
+ * @returns {React.ReactElement} the panels for cart and wishlist.
+ */
+
+const PanelHeader = (): React.ReactElement => {
+  const { selectedTab, setSelectedTab } = useContext(CustomerShoppingContext)
 
   const panelHeaders = PANELS.map((tab, key) => {
     return (
       <span
-        onClick={() => setPanel(tab.id)}
+        onClick={() => setSelectedTab(tab.id)}
         key={key}
-        className={panel === tab.id ? styles.activePanel : styles.panelHeader}
+        className={
+          selectedTab == tab.id ? styles.activePanel : styles.panelHeader
+        }
       >
         {tab.name}
       </span>
     )
   })
-
-  useEffect(() => {
-    console.log(panel)
-  }, [panel])
 
   return <div className={styles.shoppingPanel}>{panelHeaders}</div>
 }

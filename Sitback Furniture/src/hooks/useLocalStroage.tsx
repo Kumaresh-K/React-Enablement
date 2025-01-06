@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 
 const getSavedValue = (key: string, initialValue: any) => {
   const savedValue = localStorage.getItem(key)
-  if (savedValue) return JSON.parse(savedValue)
+  if (savedValue !== null) return JSON.parse(savedValue)
   if (initialValue instanceof Function) return initialValue()
   return initialValue
 }
 
-const useLocalStorage = (key: string, initialValue: any) => {
+const useLocalStorage = (key: string, initialValue?: any) => {
   const [value, setValue] = useState(() => getSavedValue(key, initialValue))
 
   useEffect(() => {
@@ -18,4 +18,3 @@ const useLocalStorage = (key: string, initialValue: any) => {
 }
 
 export default useLocalStorage
-

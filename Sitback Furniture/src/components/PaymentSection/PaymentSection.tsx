@@ -2,23 +2,48 @@ import { useNavigate } from 'react-router-dom'
 import Button from '../Button/Button'
 import styles from './PaymentSection.module.scss'
 import ProductPrice from '../ProductPrice/ProductPrice'
+import useLocalStorage from '../../hooks/useLocalStroage'
+import {
+  FurnitureStructure,
+  PaymentSectionProps,
+} from '../../pages/ShoppingPage/ShoppingPageProps'
+import { getCombinedOrderSet } from '../../utils/commonUtils'
+import { useContext } from 'react'
+import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { PAYMENT_BUTTON } from '../../constants'
 
-const PaymentSection = ({ amount }: any) => {
+/**
+ * Represents a payment or order placement component.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {string} props.amount - The amount.
+ * @returns {React.ReactElement} A payment element.
+ */
+
+const PaymentSection = ({ amount }: PaymentSectionProps): React.ReactElement => {
   const navigate = useNavigate()
+  const { cartItems, setCartItems } = useContext(CustomerShoppingContext)
+  const [, setOrderItems] = useLocalStorage('order', {})
 
   return (
-    <div className={styles.paymentSection}>
+    <section className={styles.paymentSection}>
       <div className={styles.amountDetails}>
         <div className={styles.amountLabel}>TOTAL AMOUNT</div>
         <ProductPrice currencySymbol={'₹'} price={amount} />
       </div>
       <Button
-        name={'PLACE ORDER'}
+        name={PAYMENT_BUTTON}
         handleClick={() => {
-          navigate('/')
+          console.log(cartItems)
+          setOrderItems((prevOrderItems: FurnitureStructure) => {
+            return getCombinedOrderSet(prevOrderItems, cartItems)
+          })
+          setCartItems({})
+          navigate('/confirmOrder')
         }}
       />
-    </div>
+    </section>
   )
 }
 

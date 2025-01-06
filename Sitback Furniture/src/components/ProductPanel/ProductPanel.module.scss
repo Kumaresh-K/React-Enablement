@@ -1,9 +1,6 @@
+//ProductPanel Component
 .userProductList {
   padding: 0px 39px 0px 69px;
   height: 73.2vh;
   overflow: auto;
-  > div:last-child {
-    position: relative;
-    bottom: 0;
-  }
 }
