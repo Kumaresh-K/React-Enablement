@@ -1,5 +1,5 @@
 import styles from './PromotionContent.module.scss'
-import { PromotionContentProps } from '../../pages/HomePage/HomePageProps'
+import { PromotionContentProps } from '../../types/HomePageProps'
 
 /**
  * Represents a promotion component.
@@ -17,9 +17,7 @@ const PromotionContent = ({
   customStyle,
 }: PromotionContentProps): React.ReactElement => {
   return (
-    <section
-      className={customStyle?styles[customStyle]:styles.promotion}
-    >
+    <section className={customStyle ? styles[customStyle] : styles.promotion}>
       <div className={styles.headline}>{headline}</div>
       <div className={styles.tagline}>{tagline}</div>
     </section>

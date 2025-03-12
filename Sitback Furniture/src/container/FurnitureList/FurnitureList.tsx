@@ -1,8 +1,8 @@
-import { FurnitureListProps } from '../../pages/ShoppingPage/ShoppingPageProps'
-import FurnitureCard from '../FurnitureCard/FurnitureCard'
-import CartAndWishlist from '../CartAndWishlist/CartAndWishlist'
+import { FurnitureListProps } from '../../types/ShoppingPageProps'
+import FurnitureCard from '../../components/FurnitureCard/FurnitureCard'
+import CartAndWishlist from '../../components/CartAndWishlist/CartAndWishlist'
 import styles from './FurnitureList.module.scss'
-import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { CustomerShoppingContext } from '../../context/ShoppingContext'
 import { useContext } from 'react'
 import classNames from 'classnames'
 
@@ -20,9 +20,9 @@ const FurnitureList = ({
 }: FurnitureListProps): React.ReactElement => {
   const { isTabVisible } = useContext(CustomerShoppingContext)
 
-  const availableFurniture = furnitures.map((furniture, key) => (
-    <FurnitureCard furniture={furniture} key={key} />
-  ))
+  const availableFurniture = Object.values(furnitures).map((furniture, key) => {
+    return <FurnitureCard furniture={furniture} key={key} />
+  })
 
   return (
     <main className={styles.shopping}>

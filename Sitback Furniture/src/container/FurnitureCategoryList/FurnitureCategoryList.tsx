@@ -1,6 +1,6 @@
-import { FurnitureDataAsProps } from '../../pages/HomePage/HomePageProps'
+import { FurnitureDataAsProps } from '../../types/HomePageProps'
 import styles from './FurnitureCategoryList.module.scss'
-import FurnitureCategoryCard from '../FurnitureCategoryCard/FurnitureCategoryCard'
+import FurnitureCategoryCard from '../../components/FurnitureCategoryCard/FurnitureCategoryCard'
 
 /**
  * Represents a furniture category list component.

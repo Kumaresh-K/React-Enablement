@@ -1,5 +1,5 @@
 import styles from './HomePage.module.scss'
-import FurnitureCategoryList from '../../components/FurnitureCategoryList/FurnitureCategoryList'
+import FurnitureCategoryList from '../../container/FurnitureCategoryList/FurnitureCategoryList'
 import PromotionContent from '../../components/PromotionContent/PromotionContent'
 import {
   FURNITURE_CATEGORY_HEADLINE,

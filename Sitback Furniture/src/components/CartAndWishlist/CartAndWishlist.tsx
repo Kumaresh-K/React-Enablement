@@ -4,7 +4,7 @@ import ProductPanel from '../ProductPanel/ProductPanel'
 import { PANELS } from '../../constants'
 import PaymentSection from '../PaymentSection/PaymentSection'
 import { useContext, useEffect, useState } from 'react'
-import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { CustomerShoppingContext } from '../../context/ShoppingContext'
 
 /**
  * Represents a Cart/Wishlist component.

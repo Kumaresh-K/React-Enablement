@@ -6,7 +6,7 @@ export type FurnitureAttributes = {
   photo: string
   price: string
   rating: number
-  quantity: number
+  quantity?: number
 }
 
 export type FurnitureStructure = {
@@ -18,7 +18,7 @@ export type FurnitureCardProps = {
 }
 
 export type FurnitureListProps = {
-  furnitures: FurnitureStructure[]
+  furnitures: FurnitureStructure
 }
 
 export type GuaranteeBadgeProps = {

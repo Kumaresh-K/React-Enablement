@@ -6,10 +6,10 @@ import useLocalStorage from '../../hooks/useLocalStroage'
 import {
   FurnitureStructure,
   PaymentSectionProps,
-} from '../../pages/ShoppingPage/ShoppingPageProps'
+} from '../../types/ShoppingPageProps'
 import { getCombinedOrderSet } from '../../utils/commonUtils'
 import { useContext } from 'react'
-import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { CustomerShoppingContext } from '../../context/ShoppingContext'
 import { PAYMENT_BUTTON } from '../../constants'
 
 /**
@@ -21,7 +21,9 @@ import { PAYMENT_BUTTON } from '../../constants'
  * @returns {React.ReactElement} A payment element.
  */
 
-const PaymentSection = ({ amount }: PaymentSectionProps): React.ReactElement => {
+const PaymentSection = ({
+  amount,
+}: PaymentSectionProps): React.ReactElement => {
   const navigate = useNavigate()
   const { cartItems, setCartItems } = useContext(CustomerShoppingContext)
   const [, setOrderItems] = useLocalStorage('order', {})

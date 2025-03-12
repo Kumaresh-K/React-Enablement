@@ -1,4 +1,4 @@
-import { ProductPriceProps } from '../../pages/ShoppingPage/ShoppingPageProps'
+import { ProductPriceProps } from '../../types/ShoppingPageProps'
 import { numberWithCommas } from '../../utils/commonUtils'
 import styles from './ProductPrice.module.scss'
 

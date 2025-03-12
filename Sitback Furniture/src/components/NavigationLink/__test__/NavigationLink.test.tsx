@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import NavigationLink from '../components/NavigationLink/NavigationLink'
+import NavigationLink from '../NavigationLink'
 
 describe('NavigationLink Component', () => {
   const category = 'chairs'

@@ -1,6 +1,6 @@
 import styles from './OrderConfirmationPage.module.scss'
 import HomePage from '../HomePage/HomePage'
-import OrderedProductList from '../../components/OrderedProductList/OrderedProductList'
+import OrderedProductList from '../../container/OrderedProductList/OrderedProductList'
 import PromotionContent from '../../components/PromotionContent/PromotionContent'
 import { ORDER_HEADLINE, ORDER_TAGLINE } from '../../constants'
 

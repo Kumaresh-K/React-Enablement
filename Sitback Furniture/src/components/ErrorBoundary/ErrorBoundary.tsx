@@ -2,7 +2,7 @@ import { Component, ErrorInfo } from 'react'
 import {
   ErrorBoundaryProps,
   ErrorBoundaryState,
-} from '../../pages/HomePage/HomePageProps'
+} from '../../types/HomePageProps'
 
 /**
  * Represents a error boundary component.

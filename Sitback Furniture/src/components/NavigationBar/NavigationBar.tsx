@@ -1,6 +1,6 @@
 import styles from './NavigationBar.module.scss'
 import { getFurnitureCategories } from '../../utils/apiHelperUtils'
-import { FurnitureDataAsProps } from '../../pages/HomePage/HomePageProps'
+import { FurnitureDataAsProps } from '../../types/HomePageProps'
 import NavigationLink from '../NavigationLink/NavigationLink'
 import LoadingScreen from '../LoadingScreen/LoadingScreen'
 

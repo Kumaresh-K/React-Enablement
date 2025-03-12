@@ -1,6 +1,6 @@
 import styles from './GuaranteeBadge.module.scss'
 import GuaranteeShield from '../../assets/GrarnateeShield.png'
-import { GuaranteeBadgeProps } from '../../pages/ShoppingPage/ShoppingPageProps'
+import { GuaranteeBadgeProps } from '../../types/ShoppingPageProps'
 
 /**
  * Represents a guarantee badge component.

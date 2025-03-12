@@ -1,11 +1,11 @@
 import { useContext, useState } from 'react'
 import styles from './ProductCardQuantity.module.scss'
-import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { CustomerShoppingContext } from '../../context/ShoppingContext'
 import { PANELS } from '../../constants'
 import {
   FurnitureStructure,
   ProductCardQuantityProps,
-} from '../../pages/ShoppingPage/ShoppingPageProps'
+} from '../../types/ShoppingPageProps'
 
 /**
  * Represents a card quantity component.
@@ -21,6 +21,7 @@ const ProductCardQuantity = ({
 }: ProductCardQuantityProps): React.ReactElement => {
   const {
     selectedTab,
+    setSelectedTab,
     cartItems,
     setCartItems,
     wishlistItems,
@@ -38,7 +39,8 @@ const ProductCardQuantity = ({
       selectedTab === PANELS[0].id ? setCartItems : setWishlistItems
     updateItems((prevItems: FurnitureStructure) => {
       const updatedItems = { ...prevItems }
-      updatedItems[furnitureID].quantity += value
+      if (updatedItems[furnitureID].quantity)
+        updatedItems[furnitureID].quantity += value
       return updatedItems
     })
     if (count + value > 0) {
@@ -47,6 +49,10 @@ const ProductCardQuantity = ({
       updateItems((prevItems: FurnitureStructure) => {
         const updatedItems = { ...prevItems }
         delete updatedItems[furnitureID]
+        if (Object.keys(prevItems).length === 1)
+          setSelectedTab(
+            selectedTab === PANELS[0].id ? PANELS[1].id : PANELS[0].id
+          )
         return updatedItems
       })
     }

@@ -2,7 +2,7 @@ import styles from './PageHeader.module.scss'
 import NavigationBar from '../NavigationBar/NavigationBar'
 import UserProfile from '../UserProfile/UserProfile'
 import BrandName from '../BrandName/BrandName'
-import { FurnitureDataAsProps } from '../../pages/HomePage/HomePageProps'
+import { FurnitureDataAsProps } from '../../types/HomePageProps'
 
 /**
  * Represents a page header component.

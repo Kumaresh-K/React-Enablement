@@ -1,6 +1,8 @@
 import styles from './OrderedProductCard.module.scss'
-import { FurnitureCardProps } from '../../pages/ShoppingPage/ShoppingPageProps'
+import { FurnitureCardProps } from '../../types/ShoppingPageProps'
 import ProductPrice from '../ProductPrice/ProductPrice'
+import ImageWithDefault from '../ImageWithDefault/ImageWithDefault'
+import PlaceholderPic from '../../assets/Image_not_available.jpg'
 
 /**
  * Represents a furniture card component.
@@ -16,10 +18,10 @@ const OrderedProductCard = ({
 }: FurnitureCardProps): React.ReactElement => {
   return (
     <div className={styles.furniture}>
-      <img
-        src={furniture.photo}
-        alt={`${furniture.name} picture`}
-        className={styles.furnitureImage}
+      <ImageWithDefault
+        srcImage={furniture.photo}
+        altInfo={`${furniture.name} picture`}
+        defaultSrc={PlaceholderPic}
       />
       <div className={styles.furnitureInfo}>
         <span className={styles.model}>{furniture.name}</span>

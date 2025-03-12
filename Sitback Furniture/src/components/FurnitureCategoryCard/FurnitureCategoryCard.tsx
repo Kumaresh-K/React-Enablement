@@ -1,5 +1,5 @@
 import styles from './FurnitureCategoryCard.module.scss'
-import { FurnitureCategoryCardProps } from '../../pages/HomePage/HomePageProps'
+import { FurnitureCategoryCardProps } from '../../types/HomePageProps'
 import { FURNITURE_CATEGORY_BUTTON_NAME } from '../../constants'
 import Button from '../Button/Button'
 import { useNavigate } from 'react-router-dom'

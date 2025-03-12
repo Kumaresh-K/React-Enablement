@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import useLocalStorage from '../../hooks/useLocalStroage'
+import useLocalStorage from '../hooks/useLocalStroage'
 
 export const CustomerShoppingContext = createContext<any>(null)
 

@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { PANELS } from '../../constants'
-import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { CustomerShoppingContext } from '../../context/ShoppingContext'
 import styles from './PanelHeader.module.scss'
 
 /**

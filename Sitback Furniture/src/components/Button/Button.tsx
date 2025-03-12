@@ -1,5 +1,5 @@
 import styles from './Button.module.scss'
-import { ButtonProps } from '../../pages/HomePage/HomePageProps'
+import { ButtonProps } from '../../types/HomePageProps'
 
 /**
  * Represents a primary button component.

@@ -1,9 +1,9 @@
 //FurnitureCard Component
 .furniture {
   width: 100%;
-  .furnitureImage {
-    height: 189px;
+  >img {
     width: 383px;
+    height: 189px;
     object-fit: cover;
     border-radius: 10px;
     border-top-left-radius: 0px;

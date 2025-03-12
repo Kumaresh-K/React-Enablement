@@ -1,14 +1,16 @@
 import { useContext } from 'react'
 import { ADD_TO_CART, PANELS } from '../../constants'
-import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { CustomerShoppingContext } from '../../context/ShoppingContext'
 import {
   FurnitureStructure,
   ProductPanelCardProps,
-} from '../../pages/ShoppingPage/ShoppingPageProps'
+} from '../../types/ShoppingPageProps'
 import Button from '../Button/Button'
 import ProductCardQuantity from '../ProductCardQuantity/ProductCardQuantity'
 import ProductPrice from '../ProductPrice/ProductPrice'
 import styles from './ProductPanelCard.module.scss'
+import ImageWithDefault from '../ImageWithDefault/ImageWithDefault'
+import PlaceholderPic from '../../assets/Image_not_available.jpg'
 
 /**
  * Represents a product panel card component.
@@ -22,14 +24,23 @@ import styles from './ProductPanelCard.module.scss'
 const ProductPanelCard = ({
   furniture,
 }: ProductPanelCardProps): React.ReactElement => {
-  const { selectedTab, cartItems, setCartItems, setWishlistItems } = useContext(
-    CustomerShoppingContext
-  )
+  const {
+    selectedTab,
+    setSelectedTab,
+    cartItems,
+    setCartItems,
+    wishlistItems,
+    setWishlistItems,
+  } = useContext(CustomerShoppingContext)
 
   return (
     <div className={styles.userProductCard}>
       <div className={styles.productImageContainer}>
-        <img src={furniture.photo} alt={`${furniture.name} image`} />
+        <ImageWithDefault
+          srcImage={furniture.photo}
+          defaultSrc={PlaceholderPic}
+          altInfo={`${furniture.name} image`}
+        />
       </div>
       <div className={styles.panelCard}>
         <div className={styles.productDetails}>
@@ -56,6 +67,9 @@ const ProductPanelCard = ({
                   delete updatedItems[furniture.id]
                   return updatedItems
                 })
+                if (Object.keys(wishlistItems).length === 1) {
+                  setSelectedTab(PANELS[0].id)
+                }
               }}
             ></Button>
           )}

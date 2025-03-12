@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import { CustomerShoppingContext } from '../pages/ShoppingPage/ShoppingContext'
-import FurnitureCard from '../components/FurnitureCard/FurnitureCard'
-import { ADD_TO_CART, ADD_TO_WISHLIST, PANELS } from '../constants'
+import { CustomerShoppingContext } from '../../../context/ShoppingContext'
+import FurnitureCard from '../FurnitureCard'
+import { ADD_TO_CART, ADD_TO_WISHLIST, PANELS } from '../../../constants'
 
 jest.mock(
   '../components/ProductPrice/ProductPrice',

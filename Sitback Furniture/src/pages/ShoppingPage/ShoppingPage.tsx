@@ -1,9 +1,9 @@
 import { useNavigate, useParams } from 'react-router-dom'
-import FurnitureList from '../../components/FurnitureList/FurnitureList'
+import FurnitureList from '../../container/FurnitureList/FurnitureList'
 import useAPI from '../../hooks/useAPI'
 import LoadingScreen from '../../components/LoadingScreen/LoadingScreen'
 import PageDown from '../../components/PageDown/PageDown'
-import ShoppingContext from './ShoppingContext'
+import ShoppingContext from '../../context/ShoppingContext'
 
 /**
  * Represents the shopping page.

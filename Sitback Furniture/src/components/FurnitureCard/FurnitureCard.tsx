@@ -2,13 +2,16 @@ import { useContext } from 'react'
 import {
   FurnitureCardProps,
   FurnitureStructure,
-} from '../../pages/ShoppingPage/ShoppingPageProps'
+} from '../../types/ShoppingPageProps'
 import styles from './FurnitureCard.module.scss'
 import Button from '../Button/Button'
 import GuaranteeBadge from '../GuaranteeBadge/GuaranteeBadge'
 import ProductPrice from '../ProductPrice/ProductPrice'
-import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { CustomerShoppingContext } from '../../context/ShoppingContext'
 import { ADD_TO_CART, ADD_TO_WISHLIST, PANELS } from '../../constants'
+import PlaceholderPic from '../../assets/Image_not_available.jpg'
+import ImageWithDefault from '../ImageWithDefault/ImageWithDefault'
+import { toast } from 'react-toastify'
 
 /**
  * Represents a furniture card component.
@@ -35,6 +38,10 @@ const FurnitureCard = ({
     panel: string
   ) => {
     setPanelItems((prevPanelItems: FurnitureStructure) => {
+      if (Object.keys(prevPanelItems).indexOf(furniture.id.toString()) !== -1) {
+        toast.info(`The item is already in the ${panel}.`)
+        return prevPanelItems
+      }
       return {
         ...prevPanelItems,
         [furniture.id]: { ...furniture, quantity: 1 },
@@ -44,14 +51,15 @@ const FurnitureCard = ({
       setIsTabVisible(true)
       setSelectedTab(panel)
     }
+    setSelectedTab(panel)
   }
 
   return (
     <div className={styles.furniture}>
-      <img
-        src={furniture.photo}
-        alt={`${furniture.name} picture`}
-        className={styles.furnitureImage}
+      <ImageWithDefault
+        srcImage={furniture.photo}
+        altInfo={`${furniture.name} picture`}
+        defaultSrc={PlaceholderPic}
       />
       <div className={styles.furnitureInfo}>
         <span className={styles.model}>{furniture.name}</span>

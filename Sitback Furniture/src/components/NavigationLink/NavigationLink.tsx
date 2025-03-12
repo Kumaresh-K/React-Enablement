@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import styles from './NavigationLink.module.scss'
-import { NavigationLinkProps } from '../../pages/HomePage/HomePageProps'
+import { NavigationLinkProps } from '../../types/HomePageProps'
 
 /**
  * Represents a individual navigation links.

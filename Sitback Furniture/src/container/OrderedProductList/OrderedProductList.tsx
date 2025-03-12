@@ -1,6 +1,6 @@
 import styles from './OrderedProductList.module.scss'
 import useLocalStorage from '../../hooks/useLocalStroage'
-import OrderedProductCard from '../OrderedProductCard/OrderedProductCard'
+import OrderedProductCard from '../../components/OrderedProductCard/OrderedProductCard'
 
 /**
  * Represents a ordered furniture list component.
@@ -10,11 +10,11 @@ import OrderedProductCard from '../OrderedProductCard/OrderedProductCard'
  */
 
 const OrderedProductList = (): React.ReactElement => {
-  const [cartItems] = useLocalStorage('order');
+  const [cartItems] = useLocalStorage('order')
 
   const OrderedFurnitureList = Object.keys(cartItems || {}).map((id) => (
     <OrderedProductCard furniture={cartItems[id]} key={id} />
-  )) 
+  ))
   return (
     <section className={styles.orderedFurnitureList}>
       {OrderedFurnitureList}

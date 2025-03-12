@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
-import { CustomerShoppingContext } from '../pages/ShoppingPage/ShoppingContext'
-import CartAndWishlist from '../components/CartAndWishlist/CartAndWishlist'
-import { PANELS } from '../constants'
+import { CustomerShoppingContext } from '../../../context/ShoppingContext'
+import CartAndWishlist from '../CartAndWishlist'
+import { PANELS } from '../../../constants'
 
 jest.mock('../components/PanelHeader/PanelHeader', () => () => (
   <div>PanelHeader</div>

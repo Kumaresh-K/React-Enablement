@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { useNavigate } from 'react-router-dom'
-import BrandName from '../components/BrandName/BrandName'
-import { BRAND_NAME } from '../constants'
+import BrandName from '../BrandName'
+import { BRAND_NAME } from '../../../constants'
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),

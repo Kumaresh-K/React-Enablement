@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
 import ProductPanelCard from '../ProductPanelCard/ProductPanelCard'
 import styles from './ProductPanel.module.scss'
-import { CustomerShoppingContext } from '../../pages/ShoppingPage/ShoppingContext'
+import { CustomerShoppingContext } from '../../context/ShoppingContext'
 import { PANELS } from '../../constants'
 import EmptyCart from '../EmptyCart/EmptyCart'
-import { FurnitureStructure } from '../../pages/ShoppingPage/ShoppingPageProps'
+import { FurnitureStructure } from '../../types/ShoppingPageProps'
 
 /**
  * Represents a Cart/Wishlist product panel component.

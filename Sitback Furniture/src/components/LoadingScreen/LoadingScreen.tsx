@@ -1,5 +1,5 @@
 import Loader from '../../assets/loader.gif'
-import { LoadingScreenProps } from '../../pages/HomePage/HomePageProps'
+import { LoadingScreenProps } from '../../types/HomePageProps'
 import styles from './LoadingScreen.module.scss'
 
 /**
@@ -11,7 +11,9 @@ import styles from './LoadingScreen.module.scss'
  * @returns {React.ReactElement} A loader element.
  */
 
-const LoadingScreen = ({ className }: LoadingScreenProps): React.ReactElement => {
+const LoadingScreen = ({
+  className,
+}: LoadingScreenProps): React.ReactElement => {
   return (
     <img
       src={Loader}
