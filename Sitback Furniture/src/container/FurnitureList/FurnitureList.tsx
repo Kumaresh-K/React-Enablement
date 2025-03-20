@@ -1,6 +1,6 @@
 import { FurnitureListProps } from '../../types/ShoppingPageProps'
 import FurnitureCard from '../../components/FurnitureCard/FurnitureCard'
-import CartAndWishlist from '../../components/CartAndWishlist/CartAndWishlist'
+import CartAndWishlist from '../CartAndWishlist/CartAndWishlist'
 import styles from './FurnitureList.module.scss'
 import { CustomerShoppingContext } from '../../context/ShoppingContext'
 import { useContext } from 'react'

@@ -1,8 +1,8 @@
 import styles from './CartAndWishlist.module.scss'
-import PanelHeader from '../PanelHeader/PanelHeader'
-import ProductPanel from '../ProductPanel/ProductPanel'
+import PanelHeader from '../../components/PanelHeader/PanelHeader'
+import ProductPanel from '../../components/ProductPanel/ProductPanel'
 import { PANELS } from '../../constants'
-import PaymentSection from '../PaymentSection/PaymentSection'
+import PaymentSection from '../../components/PaymentSection/PaymentSection'
 import { useContext, useEffect, useState } from 'react'
 import { CustomerShoppingContext } from '../../context/ShoppingContext'
 
