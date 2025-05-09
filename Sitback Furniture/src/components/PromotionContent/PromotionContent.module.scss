@@ -1,0 +1,21 @@
+//PromotionContent Component
+.promotion {
+    padding-bottom: 28px;
+    .headline{
+        font-size: 44px;
+        padding-bottom: 8px;
+    }
+    .tagline{
+        font-size: 28px;
+    }
+}
+.orderPromotion {
+    .headline {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .tagline {
+        font-size: 17px;
+        margin: 10px 0px 20px;
+      }
+}

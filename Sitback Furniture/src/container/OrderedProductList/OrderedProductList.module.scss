@@ -1,0 +1,8 @@
+//OrderedProductList Component
+.orderedFurnitureList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px 39px;
+    height: 345px;
+    overflow-y: auto;
+}

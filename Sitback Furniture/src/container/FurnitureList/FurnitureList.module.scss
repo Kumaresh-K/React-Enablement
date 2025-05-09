@@ -1,0 +1,29 @@
+//FurnitureList Component
+.shopping {
+  display: flex;
+  .furnitureListHero {
+    position: relative;
+    width: 100%;
+    .whiteBlock {
+      position: sticky;
+      top: 72px;
+      height: 45px;
+      background-color: #fff;
+      z-index: 3;
+    }
+    .furnitureList {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 33px 39px;
+      padding: 0px 48px;
+    }
+    .threeColumnList {
+      grid-template-columns: auto auto auto;
+      gap: 33px 39px;
+      padding: 0px 40px 0 48px;
+    }
+  }
+  .showTab {
+    width: 75.4%;
+  }
+}
