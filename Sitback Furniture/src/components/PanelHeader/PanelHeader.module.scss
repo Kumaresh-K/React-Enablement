@@ -1,0 +1,19 @@
+//PanelHeader Component
+.shoppingPanel {
+  margin-bottom: 34px;
+  padding-left: 39px;
+  span {
+    cursor: pointer;
+    margin-right: 38px;
+  }
+  .panelHeader {
+    opacity: 0.5;
+    font-weight: 400;
+  }
+  .activePanel {
+    font-weight: 500;
+    opacity: 1;
+    padding-bottom: 4px;
+    border-bottom: 2px solid black;
+  }
+}

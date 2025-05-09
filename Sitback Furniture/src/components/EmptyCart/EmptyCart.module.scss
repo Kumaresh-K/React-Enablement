@@ -1,0 +1,16 @@
+//EmptyCart Component
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  opacity: 0.6;
+  padding-bottom: 30%;
+  img {
+    width: 50%;
+  }
+  span {
+    margin-top: 20px;
+  }
+}
